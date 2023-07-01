@@ -1,0 +1,45 @@
+autoload -Uz compinit && compinit # loads completion modules
+setopt AUTO_MENU                  # show completikon menu on tab press
+setopt ALWAYS_TO_END              # move cursor after completion
+setopt COMPLETE_ALIASES           # allow asujtocompletion for aliases
+setopt COMPLETE_IN_WORD           # allow completion from middle of word
+setopt LIST_PACKED                # smallest completion menu
+setopt AUTO_PARAM_KEYS            # intelligent handling of characters
+setopt AUTO_PARAM_SLASH           # after a completion
+setopt AUTO_REMOVE_SLASH          # remove trailing slash when needed
+
+# git aliases
+alias gs="git status"
+alias ga="git add"
+alias gb="git branch"
+alias gf="git fetch"
+alias gm="git merge"
+alias gl="git log"
+alias gc="git commit"
+alias gck="git checkout"
+alias gd="git diff"
+alias gph="git push"
+alias gpl="git pull"
+alias gr="git rebase"
+alias save="git add . && git commit -m 'temp commit' && git reset --soft HEAD~1 && git commit --amend -m 'updated' && git push --force origin master"
+
+# tool aliases
+alias cat="bat"
+alias ls="eza --long"
+alias tree="eza --tree"
+alias kbs='glow -p ~/.local/share/chezmoi/KEYBOARD_SHORTCUTS.md'
+
+# zsh addons
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh         # enable zsh auto-suggestions
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh # enable syntax highlighting
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"                                        # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+# go binaries
+export PATH=$PATH:$(go env GOPATH)/bin
+
+eval "$(starship init zsh)" # bootstrap starship shell
+

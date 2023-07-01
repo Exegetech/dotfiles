@@ -1,0 +1,9 @@
+[user]
+  name = Exegetech
+  email = swissarmybox@protonmail.ch
+
+[init]
+	defaultBranch = master
+
+[includeIf "gitdir:~/Desktop/nodebotgithub"]
+  path = .gitconfig-nodebot
