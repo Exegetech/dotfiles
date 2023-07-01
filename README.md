@@ -19,3 +19,10 @@ I use FiraCode
 brew tap homebrew/cask-fonts &&
 brew install --cask font-FiraCode-nerd-font
 ```
+
+## Utilities
+
+```sh
+brew install git
+brew install bat
+```
