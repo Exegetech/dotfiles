@@ -19,3 +19,6 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 
 alias cat="/opt/homebrew/bin/bat"
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Enable Starship prompt
+starship init fish | source
