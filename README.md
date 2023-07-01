@@ -24,5 +24,11 @@ brew install --cask font-FiraCode-nerd-font
 
 ```sh
 brew install git
+brew install fish
+brew install nvim
 brew install bat
 ```
+
+## TODO
+
+- Remove or strip down vim config
