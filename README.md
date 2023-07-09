@@ -27,8 +27,17 @@ brew install git
 brew install fish
 brew install nvim
 brew install bat
+brew install ripgrep
 ```
+
+## Chezmoi Location
+
+Chezmoi data is located on `.local/share/chezmoi`
 
 ## TODO
 
 - Remove or strip down vim config
+- Add nvim-tree.lua for file explorer
+- Assign ctrl + n for file explorer
+- Assign ctrl + s for save
+- Why bat output is dark
