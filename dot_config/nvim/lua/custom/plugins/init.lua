@@ -2,6 +2,16 @@
 --  I promise not to create any merge conflicts in this directory :)
 --
 -- See the kickstart.nvim README for more information
+
+-- Check if we need to reload the file when it changed
+vim.api.nvim_create_autocmd({
+  "FocusGained",
+  "TermClose",
+  "TermLeave"
+}, {
+    command = "checktime"
+})
+
 return {
   'nkrkv/nvim-treesitter-rescript',
   'rescript-lang/vim-rescript',
