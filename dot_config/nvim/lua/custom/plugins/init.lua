@@ -4,14 +4,20 @@
 -- See the kickstart.nvim README for more information
 
 -- Check if we need to reload the file when it changed
+vim.o.autoread = true
 vim.api.nvim_create_autocmd({
+  "BufEnter",
+  "CursorHold",
+  "CursorHoldI",
   "FocusGained",
   "TermClose",
   "TermLeave"
 }, {
-    command = "checktime"
+  command = "if mode() != 'c' | checktime | endif",
+  pattern = { "*" },
 })
 
+-- Rest of configurationk
 return {
   'nkrkv/nvim-treesitter-rescript',
   'rescript-lang/vim-rescript',

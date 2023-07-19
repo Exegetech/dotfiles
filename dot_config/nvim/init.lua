@@ -219,6 +219,9 @@ vim.o.hlsearch = false
 -- Make line numbers default
 vim.wo.number = true
 
+-- Make relative line numbers default
+vim.wo.relativenumber = true
+
 -- Enable mouse mode
 vim.o.mouse = 'a'
 
@@ -237,8 +240,8 @@ vim.o.undofile = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
 
--- Keep signcolumn on by default
-vim.wo.signcolumn = 'yes'
+-- Combine absolute and relative number in one column
+vim.wo.signcolumn = 'number'
 
 -- Decrease update time
 vim.o.updatetime = 250
