@@ -21,7 +21,7 @@ vim.api.nvim_create_autocmd({
 local commentFt = require('Comment.ft')
 commentFt.rescript = {'//%s', '/*%s*/'}
 
--- Rest of configurationk
+-- Rest of configuration
 return {
   'nkrkv/nvim-treesitter-rescript',
   'rescript-lang/vim-rescript',
