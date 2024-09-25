@@ -17,4 +17,20 @@ return {
     config = true,
     opts = {}
   },
+
+  -- Search and replace
+  {
+    'nvim-pack/nvim-spectre',
+    dependencies = {
+      'nvim-lua/plenary.nvim'
+    },
+    config = function()
+      local spectre = require('spectre')
+      spectre.setup({})
+
+      vim.keymap.set('n', '<leader>sr', spectre.toggle, {
+        desc = 'Toggle spectre'
+      })
+    end
+  }
 }
