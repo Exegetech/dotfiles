@@ -26,7 +26,20 @@ return {
     },
     config = function()
       local spectre = require('spectre')
-      spectre.setup({})
+      spectre.setup({
+        -- In MacOS, sed creates backup file by default.
+        -- This setting is to disable it
+        replace_engine = {
+          ['sed'] = {
+            cmd = 'sed',
+            args = {
+              '-i',
+              '',
+              '-E'
+            }
+          }
+        }
+      })
 
       vim.keymap.set('n', '<leader>sr', spectre.toggle, {
         desc = 'Toggle spectre'
