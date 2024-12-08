@@ -32,6 +32,7 @@ brew "ripgrep"
 brew "bat"
 brew "jq"
 brew "eza"
+brew "just"
 
 # go tools
 brew "golang-migrate"
