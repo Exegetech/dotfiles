@@ -33,6 +33,7 @@ brew "bat"
 brew "jq"
 brew "eza"
 brew "just"
+brew "watchexec"
 
 # go tools
 brew "golang-migrate"
